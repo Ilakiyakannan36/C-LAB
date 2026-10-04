@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char str1[50], str2[50], str3[100];
+    int res;
+
+    printf("Enter the first string: ");
+    scanf("%s", str1);
+
+    printf("Enter the second string: ");
+    scanf("%s", str2);
+
+    // Find length of first string
+    res = strlen(str1);
+    printf("\nLength of first string = %d", res);
+
+    // Copy first string
+    strcpy(str3, str1);
+    printf("\nCopied string = %s", str3);
+
+    // Compare strings
+    res = strcmp(str1, str2);
+
+    if (res == 0)
+        printf("\nBoth strings are equal");
+    else
+        printf("\nBoth strings are not equal");
+
+    // Concatenate strings
+    strcat(str1, str2);
+    printf("\nConcatenated string = %s", str1);
+
+    return 0;
+}
+
+
+--OUTPUT
+Enter the first string: Hello
+Enter the second string: World
+
+Length of first string = 5
+Copied string = Hello
+Both strings are not equal
+Concatenated string = HelloWorld
